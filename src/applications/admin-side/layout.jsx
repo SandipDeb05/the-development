@@ -10,7 +10,7 @@ export default function Layout() {
     setActiveTab(tab);
   };
   return (
-    <div className="flex h-screen dark:text-white dark:bg-black">
+    <div className="flex dark:text-white dark:bg-black gray:bg-gray-800 gray:text-gray-200">
       <Sidebar onTabClick={handleTabClick} />
       <div className="flex flex-col flex-1">
         <Header activeTab={activeTab} />
