@@ -31,7 +31,7 @@ const columns = [
   },
   {
     field: "action",
-    headerName: "Action",
+    headerName: "Actions",
   },
 ];
 
@@ -84,8 +84,8 @@ const rowCol = [
 const Users = () => {
   return (
     <div class="relative overflow-x-auto">
-      <table class="w-full text-sm text-left rtl:text-right text-gray-500 border">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50  border-b">
+      <table class="w-full text-sm text-left rtl:text-right border">
+        <thead class="text-xs uppercase border-b">
           <tr>
             {columns?.map((column, index) => {
               return (
@@ -97,7 +97,7 @@ const Users = () => {
           </tr>
         </thead>
         <tbody>
-          {rowCol.map((cols, index) => {
+          {/* {rowCol.map((cols, index) => {
             return (
               <tr
                 key={index}
@@ -112,7 +112,7 @@ const Users = () => {
                 })}
               </tr>
             );
-          })}
+          })} */}
 
           <tr class="bg-white border-b 0 y-700 border-gray-200 hover:bg-gray-50 ray-600">
             <th
@@ -162,10 +162,10 @@ const Users = () => {
               </a>
             </td>
           </tr>
-          <tr class="bg-white border-b 0 y-700 border-gray-200 hover:bg-gray-50 ray-600">
+          <tr class="ray-600">
             <th
               scope="row"
-              class="px-6 py-4 border-b border-r font-medium text-gray-900 whitespace-nowrap "
+              class="px-6 py-4 border-b border-r font-medium whitespace-nowrap "
             >
               Magic Mouse 2
             </th>

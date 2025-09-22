@@ -1,7 +1,15 @@
 import { useEffect, useState } from "react";
 
 export default function Header({ activeTab }) {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
 
   const handleToggleTheme = () => {
     setTheme((t) => (t === "light" ? "dark" : "light"));
@@ -11,7 +19,10 @@ export default function Header({ activeTab }) {
     <header className="h-14 flex items-center px-4 border-b justify-between">
       <h1 className="text-lg font-bold">{activeTab?.name || "Dashboard"}</h1>
 
-      <button onClick={handleToggleTheme} className="px-3 py-1 rounded">
+      <button
+        onClick={handleToggleTheme}
+        className="px-3 py-1 rounded cursor-pointer"
+      >
         {theme === "dark" ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
